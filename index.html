@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Debt Management in EASY</title>
+        <script src="standalone/debt-manager.js"></script>
+        <script>
+            if(window.require) require("./js/app.js");
+        </script>
+        
+        <link href="css/default.css" type="text/css" rel="stylesheet">
+        <link href="css/fontawesome-all.min.css" type="text/css" rel="stylesheet">
+
+
+        <template id="template-client-container">
+            <div class="client-list"></div>
+        </template>
+
+        <template id="template-client-list-element">
+            <div class="client-list-element">
+                <div class="displayed-client-name"></div>
+                <div class="client-due"></div>
+                <div class="client-debt"></div>
+                <button class="bttn-client-list-show">Show <li class="fas fa-search"></button>
+            </div>
+        </template>
+
+        <template id="template-process-container">
+            <div class="process-list"></div>
+        </template>
+
+        <template id="template-process-list-element">
+            <div class="process-list-element">
+                <span class="process-list-element-data"> 
+                    <span class="process-giver"></span>
+                    <span class="fas fa-arrow-right"></span>
+                    <span class="process-receiver"></span>
+                    <span class="process-amount"></span>
+                </span>
+                <span class="process-controls">
+                    <button class="bttn-process-edit">
+                        Edit <li class="fas fa-edit" >
+                    </button>
+                    <button class="bttn-process-delete">
+                        <li class="fas fa-trash-alt">
+                    </button>
+                </span>
+            </div>
+        </template>
+
+        <template id="template-client-view">
+            <div class="client-account-overview">
+                <div class="client-overview"></div>
+                <div class="client-list-split">
+                    <span class="client-due-list"></span>
+                    <span class="client-debt-list"></span>
+                </div>
+            </div>
+        </template>
+
+        <template id="template-process-edit">
+            <div>
+                <input type="text" class="process-edit-giver">
+                <input type="text" class="process-edit-receiver">
+                <input type="number" class="process-edit-amount">
+                <button class="bttn-process-edit-cancel"></button>
+                <button class="bttn-process-edit-save"></button>
+            </div>
+        </template>
+
+    </head>
+    <body>
+        <header>
+            <button id="bttn-menu-home">Home</button>
+            <button id="bttn-menu-overview">Overview</button>
+            <button id="bttn-menu-new">New</button>
+        </header>
+        <div class="divider"></div>
+        <main id="render-anchor"></main>
+    </body>
+</html>
